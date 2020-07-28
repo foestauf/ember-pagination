@@ -1,0 +1,8 @@
+<h2>Posts</h2>
+<div>
+<ul>
+    {{#each @posts as |post|}}
+    <li>User: {{post.user}} Title: {{post.title}} - {{post.body}}</li>
+    {{/each}}
+</ul>
+</div>
