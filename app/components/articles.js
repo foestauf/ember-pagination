@@ -7,11 +7,6 @@ import { action } from "@ember/object";
 
 
 export default class ArticlesComponent extends Component {
-                 @tracked isShowingModal = false;
-                 @action
-                 toggleModal() {
-                   this.isShowingModal = !this.isShowingModal
-                 }
                  // setup our query params
                  queryParams = ["page", "perPage"];
 

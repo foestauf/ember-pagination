@@ -2,24 +2,11 @@
 <div>
 <ul>
     {{#each this.pagedContent as |post|}}
-    <button 
-    type="button" 
-    {{on "click" this.toggleModal}}
-    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-    
-    >Toggle Modal</button>
-    <li>User: {{post.user}} Title: {{post.title}} - {{post.body}}</li>
+    <Article @route="posts.post" @model={{post}} />
+
+    <li>User: {{post.user}} Title: {{post.title}}</li>
     {{/each}}
 </ul>
-{{#if this.isShowingModal}}
-    <modal-dialog
-          onClose="this.toggleModal"
-          targetAttachment="center"
-          translucentOverlay="true"
-    >
-    Oh hai there!
-    </modal-dialog>
-    {{/if}}
 </div>
 
 <PageNumbers @content={{this.pagedContent}} />
