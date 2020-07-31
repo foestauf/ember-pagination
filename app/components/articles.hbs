@@ -1,10 +1,21 @@
-<h2>Posts</h2>
+<h2 id="me">Posts</h2>
 <div>
 <ul>
     {{#each this.pagedContent as |post|}}
+    <button type="button" {{on "click" this.toggleModal}}>Toggle Modal</button>
     <li>User: {{post.user}} Title: {{post.title}} - {{post.body}}</li>
     {{/each}}
 </ul>
+{{#if this.isShowingModal}}
+    <modal-dialog
+          onClose="this.toggleModal"
+          targetAttachment="center"
+          translucentOverlay="true"
+          class="ember-modal-dialog"
+    >
+    Oh hai there!
+    </modal-dialog>
+    {{/if}}
 </div>
 
 <PageNumbers @content={{this.pagedContent}} />
