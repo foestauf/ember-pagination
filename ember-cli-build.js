@@ -1,5 +1,4 @@
 'use strict';
-const nodeSass = require('node-sass');
 
 const purgeCSS = {
   module: require("@fullhuman/postcss-purgecss"),
@@ -18,23 +17,21 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    sassOptions: {
-      implementation: nodeSass
-    },
     postcssOptions: {
       compile: {
-        plugins: [
-          {
-            module: require('postcss-import'),
-            options: {
-              path: ['nodule_modules']
-            }
-          },
-          require('tailwindcss')('./app/tailwind.config.js'),
-          ...isProduction ? [purgeCSS] : []
-        ]
-      }
-    }
+        enabled: true,
+        extension: "scss",
+        parser: require("postcss-scss"),
+        plugins: [{
+          module: require('@csstools/postcss-sass'),
+          options: {
+           includePaths: ['node_modules']
+          }
+        },
+          require("tailwindcss")("./app/tailwind.config.js"),
+        ],
+      },
+    },
     // Add options here
   });
 
