@@ -2,7 +2,6 @@ import Component from '@glimmer/component';
 import { tracked } from "@glimmer/tracking";
 import { alias, oneWay } from "@ember/object/computed";
 import pagedArray from "ember-cli-pagination/computed/paged-array";
-import { inject } from '@ember/controller'
 
 
 export default class ArticlesComponent extends Component {
