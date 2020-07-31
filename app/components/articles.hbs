@@ -2,7 +2,12 @@
 <div>
 <ul>
     {{#each this.pagedContent as |post|}}
-    <button type="button" {{on "click" this.toggleModal}}>Toggle Modal</button>
+    <button 
+    type="button" 
+    {{on "click" this.toggleModal}}
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    
+    >Toggle Modal</button>
     <li>User: {{post.user}} Title: {{post.title}} - {{post.body}}</li>
     {{/each}}
 </ul>
@@ -11,7 +16,6 @@
           onClose="this.toggleModal"
           targetAttachment="center"
           translucentOverlay="true"
-          class="ember-modal-dialog"
     >
     Oh hai there!
     </modal-dialog>
