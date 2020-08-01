@@ -75,5 +75,7 @@
   "ember": {
     "edition": "octane"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@types/ember-data__model": "^3.16.0"
+  }
 }

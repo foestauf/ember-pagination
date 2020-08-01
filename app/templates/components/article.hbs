@@ -1,0 +1,26 @@
+Hello
+    <button type="button" {{on "click" this.toggleModal}}
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Toggle Modal</button>
+
+{{#if this.isShowingModal}}
+<ModalDialog onClose={{on this.toggleModal}}
+translucentOverlay='true'
+    targetAttachment='none'
+    containerClass='centered-scrolling-container'
+    overlayClass='centered-scrolling-overlay'
+    wrapperClass='centered-scrolling-wrapper'
+ >
+
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button"
+        {{on "click" this.toggleModal}}>Close</button>
+             Title:   {{@model.title}}
+        <p>
+        {{@model.body}}
+        </p>
+Hey you guys
+{{@model.user.name}}
+</ModalDialog>
+{{/if}}
+
+{{yield}}
+
