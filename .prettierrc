@@ -9,5 +9,13 @@
   "arrowParens": "avoid",
   "requirePragma": false,
   "insertPragma": false,
-  "proseWrap": "preserve"
+  "proseWrap": "preserve",
+  "overrides": [
+    {
+      "files": ".hbs",
+      "options": {
+        "parser": "glimmer"
+      }
+    }
+  ]
 }

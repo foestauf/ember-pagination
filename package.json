@@ -15,7 +15,7 @@
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
-    "prettier": "prettier --write \"app/*/*{.js,.ts}\"",
+    "prettier": "prettier --write \"app/*/*{.js,.ts, .hbs}\"",
     "start": "ember serve",
     "test": "npm-run-all lint:* test:*",
     "test:ember": "ember test --server"
