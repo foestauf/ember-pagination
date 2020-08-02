@@ -1,3 +1,27 @@
-h2 {
-    @apply text-6xl
+body {
+    font-family: sans-serif;
 }
+
+.pagination-centered {
+    @apply text-center cursor-pointer;
+    .pagination {
+        @apply inline-flex;
+    .page-number {
+        @apply w-5;
+    }
+    .page-number:hover {
+        @apply bg-gray-600 transition-colors duration-500;
+
+    }
+    .arrow {
+        @apply w-5;
+    }
+    .disabled {
+        @apply text-gray-700
+    }
+    .active {
+        @apply bg-gray-800 text-gray-100;
+    }
+    }
+}
+

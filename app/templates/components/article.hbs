@@ -1,23 +1,40 @@
-Hello
-<button type="button" {{on "click" this.toggleModal}}
-    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Toggle Modal
+
+    <div class=" flex">
+    <button type="button" {{on "click" this.toggleModal}}
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><i class="fad fa-portal-enter"></i></button>
+<button type="button" class=" w-full text-left ml-1" {{on "click" this.toggleModal}}>{{@model.title}}
+    
 </button>
-
+</div>
 {{#if this.isShowingModal}}
-<ModalDialog onClose={{on this.toggleModal}} translucentOverlay='true' targetAttachment='none'
-    containerClass='centered-scrolling-container' overlayClass='centered-scrolling-overlay'
-    wrapperClass='centered-scrolling-wrapper'>
-
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button"
-        {{on "click" this.toggleModal}}>Close
+<ModalDialog
+    @onClose={{this.toggleModal}}
+    @clickOutsideToClose={{true}}
+    @translucentOverlay={{true}}
+    @overlayPosition='sibling'
+    @overlayClass="centered-scrolling-overlay"
+    @wrapperClass="centered-scrolling-wrapper"
+ >
+    <div class="text-gray-800 text-sm">
+        by: {{@model.user.name}}<br class="md:hidden" />({{@model.user.email}})
+    </div><button type="button" {{on "click" this.toggleModal}}>
+    <i class="fal fa-2x fa-window-close absolute top-0 right-0 h-8 w-8 m-1"></i>
     </button>
-    Title: {{@model.title}}
-    <p>
+        <div class="text-gray-900 text-xl m-2 border-b-2">
+             {{@model.title}}
+            </div>
+        <p class="text-gray-900 m-2">
         {{@model.body}}
-    </p>
-    Hey you guys
-    {{@model.user.name}}
+        </p><div class="relative h-12 w-auto right-0">
+                <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold absolute h-8 w-8 py-2 px-4 rounded right-0 bottom-0"
+                {{on "click" this.toggleModal}}
+                >
+                    <i
+                        class="fad fa-portal-exit "></i>
+                </button>
+                </div>
+
+
 </ModalDialog>
 {{/if}}
 
