@@ -1,34 +1,52 @@
 'use strict';
 
-const purgeCSS = {
-  module: require("@fullhuman/postcss-purgecss"),
-  options: {
-    content: [
-      // add extra paths here for components/controllers which include tailwind classes
-      "./app/index.html",
-      "./app/templates/**/*.hbs",
-      "./app/components/**/*.hbs",
-    ],
-    defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/]+/g) || [],
-  },
-};
+// const purgeCSS = {
+//   module: require('@fullhuman/postcss-purgecss'),
+//   options: {
+//     content: [
+//       // add extra paths here for components/controllers which include tailwind classes
+//       './app/index.html',
+//       './app/templates/**/*.hbs',
+//       './app/components/**/*.hbs',
+//     ],
+//     defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+//   },
+// };
+const purgecss = require('@fullhuman/postcss-purgecss');
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     postcssOptions: {
+      filter: {
+        enabled: true,
+        plugins: [
+          {
+            module: purgecss,
+            options: {
+              content: [
+                // add extra paths here for components/controllers which include tailwind classes
+                './app/index.html',
+                './app/templates/**/*.hbs',
+                './app/components/**/*.hbs',
+              ],
+            },
+          },
+        ],
+      },
       compile: {
         enabled: true,
-        extension: "scss",
-        parser: require("postcss-scss"),
-        plugins: [{
-          module: require('@csstools/postcss-sass'),
-          options: {
-           includePaths: ['node_modules']
-          }
-        },
-          require("tailwindcss")("./app/tailwind.config.js"),
+        extension: 'scss',
+        parser: require('postcss-scss'),
+        plugins: [
+          {
+            module: require('@csstools/postcss-sass'),
+            options: {
+              includePaths: ['node_modules'],
+            },
+          },
+          require('tailwindcss')('./app/tailwind.config.js'),
         ],
       },
     },
