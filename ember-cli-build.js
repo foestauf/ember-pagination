@@ -46,7 +46,8 @@ module.exports = function (defaults) {
               includePaths: ['node_modules'],
             },
           },
-          require('tailwindcss')('./app/tailwind.config.js'),
+
+          require('tailwindcss')('./tailwind.config.js'),
         ],
       },
     },

@@ -3,24 +3,15 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | articles', function(hooks) {
+module('Integration | Component | posts', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders all given posts by default', async function (assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<Articles />`);
+    await render(hbs`<Articles @rentals={{this.rentals}} />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <Articles>
-        template block text
-      </Articles>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('[data-test-articles-header').exists();
   });
 });
