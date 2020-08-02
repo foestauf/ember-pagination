@@ -3,7 +3,8 @@
 # compiled output
 /dist/
 /tmp/
-
+/.idea/
+/.vscode/
 # dependencies
 /bower_components/
 /node_modules/
