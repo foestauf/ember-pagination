@@ -1,8 +1,10 @@
-@import "tailwindcss/base";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/utilities';
 // Import custom tailwind overrides and components
-@import "tailwind-components.scss";
-@import "tailwindcss/components";
-@import "ember-modal-dialog/ember-modal-structure";
-@import "ember-modal-dialog/ember-modal-appearance";
-@import "modal"
+@import 'tailwind-components.scss';
+@import 'ember-modal-dialog/ember-modal-structure';
+@import 'ember-modal-dialog/ember-modal-appearance';
+/*! purgecss start ignore */
+@import 'modal';
+@import 'tailwindcss/components';
+/*! purgecss end ignore */
