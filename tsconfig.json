@@ -21,20 +21,10 @@
     "module": "es6",
     "experimentalDecorators": true,
     "paths": {
-      "ember-pagination/tests/*": [
-        "tests/*"
-      ],
-      "ember-pagination/*": [
-        "app/*"
-      ],
-      "*": [
-        "types/*"
-      ]
+      "ember-pagination/tests/*": ["tests/*"],
+      "ember-pagination/*": ["app/*"],
+      "*": ["types/*"]
     }
   },
-  "include": [
-    "app/**/*",
-    "tests/**/*",
-    "types/**/*"
-  ]
+  "include": ["app/**/*", "tests/**/*", "types/**/*", "tailwind.config.js"]
 }

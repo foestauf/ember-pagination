@@ -12,6 +12,6 @@ module('Integration | Component | posts', function (hooks) {
 
     await render(hbs`<Articles @rentals={{this.rentals}} />`);
 
-    assert.dom('.posts').exists();
+    assert.dom('[data-test-articles-header').exists();
   });
 });
