@@ -1,7 +1,7 @@
 @import 'tailwindcss/base';
-@import 'tailwindcss/components';
 
 /*! purgecss start ignore */
+@import 'tailwindcss/components';
 @import 'tailwind-components.scss';
 @import 'modal';
 @import 'ember-modal-dialog/ember-modal-structure';
