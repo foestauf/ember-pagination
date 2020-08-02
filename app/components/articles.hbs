@@ -1,11 +1,12 @@
-<h2 id="me">Posts</h2>
+<div class=" text-2xl text-gray-900">User posts</div>
 <div>
 <ul>
     {{#each this.pagedContent as |post|}}
+    <li class="m-4 border-solid border-2">
     <Article @route="posts.post" @model={{post}} />
-
-    <li>Title: {{post.title}}</li>
+</li>
     {{/each}}
+    
 </ul>
 </div>
 
