@@ -5,8 +5,8 @@
 //   },
 // );
 
-import JSONAPIAdapter from "@ember-data/adapter/json-api";
+import JSONAPIAdapter from '@ember-data/adapter/json-api';
 
 export default JSONAPIAdapter.extend({
-  host: "https://jsonplaceholder.typicode.com",
+  host: 'https://jsonplaceholder.typicode.com',
 });
