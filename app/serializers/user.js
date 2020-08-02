@@ -1,5 +1,4 @@
-import RESTSerializer from "@ember-data/serializer/rest";
-
+import RESTSerializer from '@ember-data/serializer/rest';
 
 export default RESTSerializer.extend({
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
