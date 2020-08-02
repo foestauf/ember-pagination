@@ -15,6 +15,7 @@
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
+    "prettier": "prettier --write \"app/*/*.js\"",
     "start": "ember serve",
     "test": "npm-run-all lint:* test:*",
     "test:ember": "ember test --server"
@@ -76,6 +77,16 @@
     "edition": "octane"
   },
   "dependencies": {
-    "@types/ember-data__model": "^3.16.0"
+    "@types/ember-data__model": "^3.16.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
