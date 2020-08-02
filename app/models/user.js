@@ -3,6 +3,7 @@ import { readOnly } from "@ember/object/computed";
 
 export default class UserModel extends Model {
   @attr name;
+  @attr email;
   @belongsTo("posts") posts;
 
   @readOnly('user.name')userName;

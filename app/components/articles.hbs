@@ -4,7 +4,7 @@
     {{#each this.pagedContent as |post|}}
     <Article @route="posts.post" @model={{post}} />
 
-    <li><User/>User: {{post.user.name}} Title: {{post.title}}</li>
+    <li>Title: {{post.title}}</li>
     {{/each}}
 </ul>
 </div>
