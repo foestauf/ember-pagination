@@ -18,7 +18,8 @@
     "prettier": "prettier --write \"app/*/*{.js,.ts, .hbs}\"",
     "start": "ember serve",
     "test": "npm-run-all lint:* test:*",
-    "test:ember": "ember test --server"
+    "test:ember": "ember test",
+    "test-server": "ember test --server"
   },
   "devDependencies": {
     "@csstools/postcss-sass": "^4.0.0",
