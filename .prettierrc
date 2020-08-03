@@ -10,6 +10,7 @@
   "requirePragma": false,
   "insertPragma": false,
   "proseWrap": "preserve",
+  "endOfLine": "auto",
   "overrides": [
     {
       "files": ".hbs",
