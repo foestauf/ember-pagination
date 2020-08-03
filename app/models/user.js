@@ -1,10 +1,7 @@
-import Model, { attr, belongsTo } from '@ember-data/model';
-import { readOnly } from '@ember/object/computed';
+import Model, { attr, hasMany } from '@ember-data/model';
 
 export default class UserModel extends Model {
   @attr name;
   @attr email;
-  @belongsTo('posts') posts;
-
-  @readOnly('user.name') userName;
+  @hasMany('post') posts;
 }

@@ -1,13 +1,12 @@
 export default function () {
-  this.passthrough();
   this.urlPrefix = 'https://jsonplaceholder.typicode.com';
-  this.namespace = '';
   // this.get('/posts');
-  this.get('/posts', (schema, request) => {
-    return schema.posts.all();
-  });
+  this.get('/posts');
 
   this.get('/posts/:id');
+
+  this.get('/users');
+  this.get('/users/:id');
 
   // These comments are here to help you get started. Feel free to delete them.
 
