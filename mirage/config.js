@@ -1,9 +1,23 @@
 export default function () {
   this.passthrough();
+  this.urlPrefix = 'https://jsonplaceholder.typicode.com';
   this.namespace = '';
   // this.get('/posts');
-  this.get('/posts', () => {
-    return { posts: [{ id: 1, title: 'hello', body: 'hi kids' }] };
+  this.get('/posts/', () => {
+    return {
+      posts: [
+        {
+          id: 1,
+          title: 'hello',
+          body: 'hi kids',
+        },
+        {
+          id: 2,
+          title: 'Yo guys',
+          body: 'We here',
+        },
+      ],
+    };
   });
 
   this.get('/posts/:id');
