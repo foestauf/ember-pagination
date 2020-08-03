@@ -1,57 +1,26 @@
-# ember-pagination
+# Demo pagination app.
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Built on Ember.JS 3.19  
+Deployed to Netlify [here](https://heuristic-wescoff-8b728b.netlify.app/)  
+Technologies used:
 
-## Prerequisites
+- Ember Data Store
+- ESLint
+- Prettier
+- TypeScript (in limited spots, still learning!)
+- SCSS
+- Tailwind CSS
+- PostCSS/PurgeCSS
+- Husky
+- [Ember-Modal-Dialog](https://https://github.com/yapplabs/ember-modal-dialog)
+- [Ember-CLI-Pagination](https://github.com/mharris717/ember-cli-pagination)
+- [JSONPlaceHolderAPI](https://jsonplaceholder.typicode.com/)
 
-You will need the following things properly installed on your computer.
+---
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+Todo list:
 
-## Installation
+- [ ] Integrate Ember-CLI-Mirage
+- [ ] Expand integration tests
 
-* `git clone <repository-url>` this repository
-* `cd ember-pagination`
-* `npm install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/873f3593-3ae4-49e8-ac60-10e313b9dc36/deploy-status)](https://app.netlify.com/sites/heuristic-wescoff-8b728b/deploys)
