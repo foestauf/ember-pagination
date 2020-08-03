@@ -5,6 +5,7 @@ export default function () {
   this.get('/posts', () => {
     return { posts: [{ id: 1, title: 'hello', body: 'hi kids' }] };
   });
+
   this.get('/posts/:id');
 
   // These comments are here to help you get started. Feel free to delete them.
