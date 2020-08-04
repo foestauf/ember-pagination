@@ -5,7 +5,6 @@ export default class UsersUser extends Route.extend({
 }) {
   // normal class body definition here
   model(params: { id: number }) {
-    console.log(params);
     return this.store.query('user', { userId: params.id });
   }
 }
